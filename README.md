@@ -1,6 +1,6 @@
-#微信爬虫程序
+# 微信爬虫程序
 本微信爬虫程序基于fiddler和appium，实现全自动爬取给定微信公众号所有历史文章，包括阅读数，点赞数，评论数。
-##主要思路
+## 主要思路
 1. 通过微信公众号文章引用可以获得任意一个微信公众号所有文章的链接，因此我们需要手动登录微信公众号平台，查询某个公众号文章，fiddler会自动获取
 登录cookie和token，保存到fiddler-token-public.log文件中，之后就不需要再操作微信公众号平台了。
 
@@ -15,22 +15,22 @@
 
 
 
-#所需工具及依赖包
-##所用工具
+# 所需工具及依赖包
+## 所用工具
 1. fiddler4
 2. appium
 3. 夜神安卓模拟器
 4. 微信6.7.3
 5. mongoDB
-##python依赖包安装
+## python依赖包安装
 + appium
 + selenium
 + requests_html
 + requests
 + pymongo
 + urllib3
-#环境配置
-##fiddler4安装
+# 环境配置
+## fiddler4安装
 1. 下载地址https://www.telerik.com/download/fiddler，一步步安装好
 
 2. 打开fiddler，tools->options->https
@@ -103,7 +103,7 @@ appmsg_token, pass_ticket, biz, cookie保存到fiddler-token.log。为此需要�
 
 接下来fiddler就可以正常抓取手机的包了
 
-##appium安装
+## appium安装
 1. 桌面版下载安装https://github.com/appium/appium-desktop/releases
 
 2. android SDK安装与配置，还需要配置一下环境变量，添加ANDROID_HOME为Android SDK 所在路径，然后再添
@@ -113,7 +113,7 @@ appmsg_token, pass_ticket, biz, cookie保存到fiddler-token.log。为此需要�
 
 ![](.README_images/c088d05d.png)
 
-##夜神安卓模拟器
+## 夜神安卓模拟器
 
 1. 下载安装：https://www.yeshen.com/
 
@@ -123,7 +123,7 @@ appmsg_token, pass_ticket, biz, cookie保存到fiddler-token.log。为此需要�
 
 3. 在夜神模拟器中下载微信6.7.3并安装
 
-##mongoDB安装
+## mongoDB安装
 
 1. 下载安装：https://www.runoob.com/mongodb/mongodb-window-install.html
 
@@ -131,7 +131,7 @@ appmsg_token, pass_ticket, biz, cookie保存到fiddler-token.log。为此需要�
 
 3. 开启mongoDB服务
  
- #执行步骤
+ # 执行步骤
  1. 打开fiddler，修改fiddler rules并设置好手机端抓包，使fiddler可以抓取到手机网络信息。
  
  2. 开启appium服务，确保appium可以操纵手机，若不可以，请参考appium连接夜神模拟器： https://blog.csdn.net/oHuaXin1234/article/details/80988177
